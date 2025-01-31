@@ -17,3 +17,8 @@ and where these end-points are handled are controllers namely -> auth.controller
 Also the files in backend/lib so far are used for -> connecting to mongoose for storing and retreiving data
                                                   -> connecting to cloudinary for storing and retreiving images
                                                   -> generating jwt token by using jsonwebtoken and it is being used to confirm if our current session is valid or not and it is signed with a secret_key which is being stored in the .env file ans can be used to verify the authenticity of our data later on. In fact we are verifying it in the protectRoute (auth.middleware.js) it ensures that we are not getting dupped by a similar kind of token.
+
+3. Made the basic front-end structure and made the Pages and a control hub for the various front-end routes called useAuthStore.js it basically checks and sends data around ensuring we dont send wrong data. Also used toast to implement error and success messages its pretty neat. Made a impage pattern to fill whitespace on signup and login pages.And Navbar has been updated to include buttons and the logo.
+Also the login,signup and logout functions have been setup and working successfully. And used Axios to fetch the api-endpoints from the backend.
+Had to use cors package or I was getting a cross-origin error (basically its a security thing to save us from unknown websites attacking our API).
+Thats about it for this time.
